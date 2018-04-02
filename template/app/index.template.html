@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{{ meta.inject().title.text() }}}
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <meta name="theme-color" content="#f60"> {{{ meta.inject().meta.text() }}}
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<style>
+  .browser-9-placeholder {
+    line-height: 30px;
+  }
+
+  .browser-8-placeholder {
+    line-height: 60px;
+  }
+
+  .browser-8,
+  .browser-9 {
+    background-color: #FF4949;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+  }
+</style>
+
+<body>
+  <!--[if IE 9]>
+      <div class="browser-9-placeholder">1</div>
+      <div class="browser-9">系统检测到您可能正在使用ie9内核的浏览器，这将导致部分功能受限，若您使用的是双核浏览器，为了您的体验和资金安全，请切换至极速模式。</div>
+  <![endif]-->
+  <!--[if IE 8]>
+    <div class="browser-8-placeholder">1</div>
+    <div class="browser-8">系统检测到您可能正在使用ie8内核的浏览器，该浏览器内核十分古老且具有安全风险，Rostones官网也不支持该浏览器内核。
+    <br>为了您的体验，Rostones推荐您下载chrome，firefox,或其他国产双核浏览器并切换至极速模式。</div>
+  <![endif]-->
+  <!--vue-ssr-outlet-->
+</body>
+
+</html>
